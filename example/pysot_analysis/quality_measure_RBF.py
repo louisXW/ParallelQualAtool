@@ -13,7 +13,7 @@ def read_measured_data(filename):
                 str2 = str1[3].replace('@[', '').replace('\n', '').replace(']', '').split(', ')
                 str3 = str1[0:3] + str2
                 if 'None' in str3:
-                    str3 = str1[0:2] + ['5'] + str2
+                    str3 = str1[0:2] + ['0'] + str2
                     str3 = [float(item) for item in str3]
                     data.append(str3)
                 else:
